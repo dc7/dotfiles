@@ -1,0 +1,17 @@
+# virtual environment settings
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/revup/work
+export PIP_RESPECT_VIRTUALENV=true
+source /usr/local/bin/virtualenvwrapper.sh
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+
+# misc environment variables
+export desktop=~/Desktop
+export docs=~/Documents
+export PATH+=:~/scripts
+
+# misc settings
+set mark-directories on
+
+# vi-mode
+set -o vi
