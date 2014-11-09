@@ -1,7 +1,7 @@
 " vundle settings
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'airblade/vim-gitgutter'           " show git diff in gutter
 Plugin 'altercation/vim-colors-solarized' " colorscheme
@@ -58,7 +58,7 @@ set formatprg=par\ -w79\ -j
 set guioptions-=L                                  " remove left-hand scroll bar
 set guioptions-=T                                  " remove toolbar
 set guioptions-=r                                  " remove right-hand scroll bar
-set guifont=Monospace\ 12                          " default font, slightly larger size
+set guifont=Lucida_Console:h12                     " common font, slightly larger size
 set hidden                                         " hide unsaved buffers without prompting
 set history=200                                    " history
 set ignorecase                                     " required for smartcase
@@ -90,14 +90,14 @@ if !has("unix")
 endif
 
 " search priority for revup repository
-set path+=~/revup/work/frontend/frontend/static/**
-set path+=~/revup/work/**
+set path+=$HOME/revup/work/frontend/frontend/static/**
+set path+=$HOME/revup/work/**
 
 " backup settings
 set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupdir=$HOME/.vim-tmp,$HOME/.tmp,$HOME/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=$HOME/.vim-tmp,$HOME/.tmp,$HOME/tmp,/var/tmp,/tmp
 set writebackup
 
 " syntastic settings for c++
@@ -114,7 +114,7 @@ endfunction
 " autocommands
 if has ("autocmd")
     " run grunt after editing for revup
-    autocmd BufWritePost *.js,*.css,*.scss silent !~/scripts/grunt.sh
+    autocmd BufWritePost *.js,*.css,*.scss silent !$HOME/scripts/grunt.sh
     " disable automatic continuation of comments
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
     " disable flashing on error
