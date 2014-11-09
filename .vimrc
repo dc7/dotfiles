@@ -58,7 +58,7 @@ set formatprg=par\ -w79\ -j
 set guioptions-=L                                  " remove left-hand scroll bar
 set guioptions-=T                                  " remove toolbar
 set guioptions-=r                                  " remove right-hand scroll bar
-set guifont=Lucida_Console:h12                     " common font, slightly larger size
+set guifont=Monospace\ 12,Lucida_Console:h12       " common font, slightly larger size
 set hidden                                         " hide unsaved buffers without prompting
 set history=200                                    " history
 set ignorecase                                     " required for smartcase
