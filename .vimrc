@@ -102,12 +102,12 @@ set writebackup
 
 " syntastic settings for c++
 let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++11 -Weverything -Wno-c++98-compat -Wno-padded'
+let g:syntastic_cpp_compiler_options = '-std=c++1y -Weverything -Wno-c++98-compat -Wno-padded'
 
 " if c++ makefile doesn't exist, set a default make command
 function! SetCppMakePrg()
     if !filereadable(expand("%:p:h")."/Makefile")
-        setlocal makeprg=clang++\ -o\%<\ %\ -std=c++11\ -Weverything\ -Wno-c++98-compat\ -Wno-padded\ -Werror\ -fsanitize=alignment,bool,bounds,enum,float-cast-overflow,float-divide-by-zero,function,integer,integer-divide-by-zero,null,object-size,return,shift,signed-integer-overflow,undefined,unreachable,unsigned-integer-overflow,vla-bound,vptr
+        setlocal makeprg=clang++\ -o\%<\ %\ -std=c++1y\ -Weverything\ -Wno-c++98-compat\ -Wno-padded\ -Werror\ -fsanitize=alignment,bool,bounds,enum,float-cast-overflow,float-divide-by-zero,function,integer,integer-divide-by-zero,null,object-size,return,shift,signed-integer-overflow,undefined,unreachable,unsigned-integer-overflow,vla-bound,vptr
     endif
 endfunction
 
