@@ -120,5 +120,5 @@ if has ("autocmd")
     " disable flashing on error
     autocmd GUIEnter * set visualbell t_vb=
     " set default make command for c++
-    autocmd BufReadPost *.cpp :call SetCppMakePrg()
+    autocmd BufEnter *.cpp :call SetCppMakePrg()
 endif
