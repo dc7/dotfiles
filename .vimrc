@@ -121,4 +121,6 @@ if has ("autocmd")
     autocmd GUIEnter * set visualbell t_vb=
     " set default make command for c++
     autocmd BufEnter *.cpp :call SetCppMakePrg()
+    " automatically mark forth scripts as executable
+    autocmd BufWritePost *.fs silent !chmod +x %
 endif
