@@ -38,7 +38,7 @@ filetype plugin indent on
 
 " colorschemes
 if has('unix') && !has('gui_running')
-    set term=xterm-256color
+    set term=screen-256color
 endif
 let g:solarized_termcolors=256
 let t_Co=256
@@ -46,8 +46,9 @@ set background=light
 colorscheme solarized
 
 " miscellaneous settings
-cnoremap ca/ campaign_admin/
+cnoremap a/ authorize/
 cnoremap c/ campaign/
+cnoremap ca/ campaign_admin/
 nnoremap <leader>ag :ProjectRootExe Ag<space>
 runtime macros/matchit.vim                         " enable default matchit plugin
 set autochdir                                      " change directory when opening files
@@ -55,10 +56,10 @@ set autoindent                                     " auto indent
 set backspace=indent,eol,start                     " smart backspace
 set encoding=utf-8                                 " encoding
 set formatprg=par\ -w79\ -j
+set guifont=Monospace\ 12,Lucida_Console:h12       " common font, slightly larger size
 set guioptions-=L                                  " remove left-hand scroll bar
 set guioptions-=T                                  " remove toolbar
 set guioptions-=r                                  " remove right-hand scroll bar
-set guifont=Monospace\ 12,Lucida_Console:h12       " common font, slightly larger size
 set hidden                                         " hide unsaved buffers without prompting
 set history=200                                    " history
 set ignorecase                                     " required for smartcase
@@ -66,6 +67,7 @@ set incsearch                                      " search as characters are en
 set lazyredraw                                     " redraw only when we need to
 set listchars=tab:▸\ ,eol:¬                        " :set list to show tabs/newlines
 set noerrorbells visualbell t_vb=                  " don't beep on error
+set shell=bash
 set smartcase                                      " smart case-sensitivity
 set splitright                                     " split right
 set suffixesadd+=.py,.html,.js,.css,.scss,.coffee  " for :find
