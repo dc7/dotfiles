@@ -10,8 +10,30 @@ export desktop=~/Desktop
 export docs=~/Documents
 export PATH+=:~/scripts
 
-# misc settings
+# set prompt (\$ changes on root)
+export PS1='\$ '
+
+# show slash after directories
 set mark-directories on
 
-# vi-mode
+# press ^[ on command line for vi-mode
 set -o vi
+
+# for cd, only complete directories
+complete -d cd
+
+# recursive globbing with **
+shopt -s globstar
+
+# share command history
+__on_debug() {
+    history -a ; history -n
+}
+trap __on_debug DEBUG
+
+# start tmux and attach to session if running
+tmux attach &> /dev/null
+if [[ ! $TERM =~ screen ]]; then
+    export TERM=screen-256color
+    exec tmux
+fi
