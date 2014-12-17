@@ -30,10 +30,3 @@ __on_debug() {
     history -a ; history -n
 }
 trap __on_debug DEBUG
-
-# start tmux and attach to session if running
-export TERM=screen-256color
-tmux attach &> /dev/null
-if [[ ! $TERM =~ screen ]]; then
-    exec tmux
-fi
