@@ -83,10 +83,9 @@ map <C-V> "+gP
 cmap <C-V> <C-R>+
 exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
 exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
-" noremap <C-Q> <C-V>
-" inoremap <C-Q> <C-V>
-" noremap <C-S-V> <C-V>
-" inoremap <C-S-V> <C-V>
+noremap <C-S-V> <C-V>
+inoremap <C-S-V> <C-V>
+cnoremap <C-S-V> <C-V>
 if !has("unix")
     set guioptions-=a
 endif
