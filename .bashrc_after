@@ -32,8 +32,8 @@ __on_debug() {
 trap __on_debug DEBUG
 
 # start tmux and attach to session if running
+export TERM=screen-256color
 tmux attach &> /dev/null
 if [[ ! $TERM =~ screen ]]; then
-    export TERM=screen-256color
     exec tmux
 fi
