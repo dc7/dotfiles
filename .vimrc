@@ -46,9 +46,6 @@ set background=light
 colorscheme solarized
 
 " miscellaneous settings
-cnoremap a/ authorize/
-cnoremap c/ campaign/
-cnoremap ca/ campaign_admin/
 nnoremap <leader>ag :ProjectRootExe Ag<space>
 runtime macros/matchit.vim                         " enable default matchit plugin
 set autochdir                                      " change directory when opening files
@@ -89,6 +86,11 @@ cnoremap <C-S-V> <C-V>
 if !has("unix")
     set guioptions-=a
 endif
+
+" revup shortcuts
+cnoremap find<space>a/ find authorize/
+cnoremap find<space>c/ find campaign/
+cnoremap find<space>ca/ find campaign_admin/
 
 " search priority for revup repository
 set path+=$HOME/revup/work/frontend/frontend/static/**
