@@ -67,7 +67,7 @@ set noerrorbells visualbell t_vb=                  " don't beep on error
 set shell=bash
 set smartcase                                      " smart case-sensitivity
 set splitright                                     " split right
-set suffixesadd+=.py,.html,.js,.css,.scss,.coffee  " for :find
+set suffixesadd=.py,.html,.js,.css,.scss,.cpp      " for :find
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab " tabs
 set wildmenu                                       " visual autocomplete for command menu
 set wildmode=list:longest,full                     " longest matches first
@@ -88,6 +88,10 @@ if !has("unix")
 endif
 
 " revup shortcuts
+cnoremap Find<space>a/ find authorize/
+cnoremap Find<space>c/ find campaign/
+cnoremap Find<space>ca/ find campaign_admin/
+cnoremap Find<space> find 
 cnoremap find<space>a/ find authorize/
 cnoremap find<space>c/ find campaign/
 cnoremap find<space>ca/ find campaign_admin/
