@@ -24,9 +24,3 @@ complete -d cd
 
 # recursive globbing with **
 shopt -s globstar
-
-# share command history
-__on_debug() {
-    history -a ; history -n
-}
-trap __on_debug DEBUG
