@@ -24,3 +24,9 @@ complete -d cd
 
 # recursive globbing with **
 shopt -s globstar
+
+# start tmux, attach to session if running
+if [[ -z "$TMUX" ]]; then
+    export TERM=screen-256color
+    tmux attach &> /dev/null || exec tmux
+fi
