@@ -46,7 +46,7 @@ set background=light
 colorscheme solarized
 
 " miscellaneous settings
-nnoremap <leader>ag :ProjectRootExe Ag<space>
+nnoremap <leader>ag :Start ProjectRootExe Ag<space>
 runtime macros/matchit.vim                         " enable default matchit plugin
 set autochdir                                      " change directory when opening files
 set autoindent                                     " auto indent
