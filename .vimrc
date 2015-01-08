@@ -7,6 +7,7 @@ Plugin 'airblade/vim-gitgutter'           " show git diff in gutter
 Plugin 'altercation/vim-colors-solarized' " colorscheme
 Plugin 'ap/vim-css-color'                 " highlight colors in css files
 Plugin 'bling/vim-airline'                " fancy status/tabline
+Plugin 'christoomey/vim-tmux-navigator'   " tmux integration
 Plugin 'cmdalias.vim'                     " create aliases for vim commands
 Plugin 'dbakker/vim-projectroot'          " :ProjectRootCD finds project root
 Plugin 'derekwyatt/ag.vim'                " :Ag integration

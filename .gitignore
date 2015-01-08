@@ -1,4 +1,12 @@
 *
+
 !.bashrc_after
 !.gitignore
+!.tmux.conf
 !.vimrc
+
+!.config
+.config/*
+!.config/fish
+.config/fish/*
+!.config/fish/config.fish
