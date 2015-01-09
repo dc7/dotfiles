@@ -8,6 +8,7 @@ set -x PIP_VIRTUALENV_BASE $WORKON_HOME
 set -x desktop $HOME/Desktop
 set -x docs $HOME/Documents
 set -gx PATH $PATH $HOME/scripts
+set -gx LD_LIBRARY_PATH $LD_LIBRARY_PATH /usr/local/lib
 
 # virtualenvwrapper emulation
 function workon
@@ -17,3 +18,8 @@ function workon
 
 # disable welcome message
 set --erase fish_greeting
+
+# use dollar sign as prompt
+function fish_prompt
+    echo "\$ "
+    end
