@@ -33,6 +33,7 @@ Plugin 'tpope/vim-fugitive'               " git wrapper
 Plugin 'tpope/vim-repeat'                 " dot repetition for some plugins
 Plugin 'tpope/vim-surround'               " simple quoting and parenthesizing
 Plugin 'unimpaired.vim'                   " complementary bracket mappings
+Plugin 'wting/rust.vim'                   " rust syntax highlighting
 call vundle#end()
 filetype plugin indent on
 " end vundle settings
@@ -131,4 +132,6 @@ if has ("autocmd")
     autocmd BufEnter *.cpp :call SetCppMakePrg()
     " automatically mark forth scripts as executable
     autocmd BufWritePost *.fs silent !chmod +x %
+    " set filetype for rust
+    autocmd BufEnter *.rs set ft=rust
 endif
