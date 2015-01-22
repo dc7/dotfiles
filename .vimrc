@@ -30,6 +30,7 @@ Plugin 'sjl/gundo.vim'                    " :GundoToggle shows undo tree
 Plugin 'tpope/vim-commentary'             " gc comments stuff out
 Plugin 'tpope/vim-dispatch'               " :Make compiles asynchronously
 Plugin 'tpope/vim-fugitive'               " git wrapper
+Plugin 'tpope/vim-obsession'              " save/restore sessions
 Plugin 'tpope/vim-repeat'                 " dot repetition for some plugins
 Plugin 'tpope/vim-surround'               " simple quoting and parenthesizing
 Plugin 'unimpaired.vim'                   " complementary bracket mappings
