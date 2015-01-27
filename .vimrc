@@ -3,10 +3,12 @@ set nocompatible
 filetype off
 set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'csapprox'                         " support all colorschemes in terminal
 Plugin 'airblade/vim-gitgutter'           " show git diff in gutter
 Plugin 'altercation/vim-colors-solarized' " colorscheme
 Plugin 'ap/vim-css-color'                 " highlight colors in css files
 Plugin 'bling/vim-airline'                " fancy status/tabline
+Plugin 'autumnleaf'                       " colorscheme
 Plugin 'christoomey/vim-tmux-navigator'   " tmux integration
 Plugin 'cmdalias.vim'                     " create aliases for vim commands
 Plugin 'dbakker/vim-projectroot'          " :ProjectRootCD finds project root
@@ -39,14 +41,9 @@ call vundle#end()
 filetype plugin indent on
 " end vundle settings
 
-" colorschemes
-if has('unix') && !has('gui_running')
-    set term=screen-256color
-endif
-let g:solarized_termcolors=256
-let t_Co=256
-set background=light
-colorscheme solarized
+" colorscheme
+colorscheme autumnleaf
+let g:colors_name = 'autumnleaf' " fix bug in autumnleaf colorscheme
 
 " miscellaneous settings
 nnoremap <leader>ag :AgForProjectRoot<space>
