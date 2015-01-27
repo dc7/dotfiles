@@ -23,6 +23,3 @@ set --erase fish_greeting
 function fish_prompt
     echo "\$ "
     end
-
-# use frontend environment by default
-workon "frontend"
