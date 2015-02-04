@@ -47,6 +47,7 @@ let g:colors_name = 'autumnleaf' " fix bug in autumnleaf colorscheme
 
 " miscellaneous settings
 nnoremap <leader>ag :AgForProjectRoot<space>
+nnoremap <leader>l :redraw!<enter>
 runtime macros/matchit.vim                         " enable default matchit plugin
 set autochdir                                      " change directory when opening files
 set autoindent                                     " auto indent
