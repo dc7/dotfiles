@@ -12,7 +12,7 @@ set -gx LD_LIBRARY_PATH $LD_LIBRARY_PATH /usr/local/lib
 
 # virtualenvwrapper emulation
 function workon
-    source $HOME/.virtualenvs/$argv/bin/activate.fish
+    . $HOME/.virtualenvs/$argv/bin/activate.fish
     cd $HOME/revup/work/$argv
     end
 
