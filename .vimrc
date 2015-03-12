@@ -43,8 +43,11 @@ filetype plugin indent on
 
 " colorscheme
 set t_Co=256
-colorscheme autumnleaf
-let g:colors_name = 'autumnleaf' " fix bug in autumnleaf colorscheme
+try
+    colorscheme autumnleaf
+    let g:colors_name = 'autumnleaf' " fix bug in autumnleaf colorscheme
+catch
+endtry
 
 " miscellaneous settings
 nnoremap <leader>ag :AgForProjectRoot<space>
