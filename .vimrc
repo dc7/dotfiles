@@ -112,6 +112,13 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=$HOME/.vim-tmp,$HOME/.tmp,$HOME/tmp,/var/tmp,/tmp
 set writebackup
 
+" persistent undo
+silent call system('mkdir $HOME/.vim/undo')
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
+
 " syntastic settings for c++
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++1y -Weverything -Wno-c++98-compat -Wno-padded'
