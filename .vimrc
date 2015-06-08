@@ -70,6 +70,7 @@ set ignorecase                                     " required for smartcase
 set incsearch                                      " search as characters are entered
 set lazyredraw                                     " redraw only when we need to
 set listchars=tab:▸\ ,eol:¬                        " :set list to show tabs/newlines
+set mouse=a                                        " enable mouse in vim
 set noerrorbells visualbell t_vb=                  " don't beep on error
 set shell=bash
 set smartcase                                      " smart case-sensitivity
