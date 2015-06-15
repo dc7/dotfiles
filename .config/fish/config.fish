@@ -1,6 +1,6 @@
 # virtual environment settings
 set -x WORKON_HOME $HOME/.virtualenvs
-set -x PROJECT_HOME $HOME/revup/work
+set -x PROJECT_HOME $HOME/revup
 set -x PIP_RESPECT_VIRTUALENV true
 set -x PIP_VIRTUALENV_BASE $WORKON_HOME
 
@@ -13,7 +13,7 @@ set -gx LD_LIBRARY_PATH $LD_LIBRARY_PATH /usr/local/lib
 # virtualenvwrapper emulation
 function workon
     . $HOME/.virtualenvs/$argv/bin/activate.fish
-    cd $HOME/revup/work/$argv
+    cd $HOME/revup/$argv
     end
 
 # disable welcome message
