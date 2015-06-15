@@ -105,8 +105,10 @@ cnoremap find<space>c/ find campaign/
 cnoremap find<space>ca/ find campaign_admin/
 
 " search priority for revup repository
+set path+=$HOME/revup/data_manager/data_manager/static/**
+set path+=$HOME/revup/data_manager/**
 set path+=$HOME/revup/work/frontend/frontend/static/**
-set path+=$HOME/revup/work/**
+set path+=$HOME/revup/**
 
 " backup settings
 set backup
