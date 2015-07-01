@@ -22,7 +22,6 @@ Plugin 'kana/vim-textobj-entire'          " ae ie entire buffer object
 Plugin 'kana/vim-textobj-lastpat'         " a/ i/ last pattern object
 Plugin 'kana/vim-textobj-line'            " al il current line object
 Plugin 'kana/vim-textobj-user'            " custom text object support
-Plugin 'kien/rainbow_parentheses.vim'     " rainbow parens
 Plugin 'lokaltog/vim-easymotion'          " \\w etc. easy motion
 Plugin 'majutsushi/tagbar'                " :TagbarToggle shows tags
 Plugin 'maxbrunsfeld/vim-yankstack'       " M-p M-S-p yank stack
@@ -52,6 +51,7 @@ catch
 endtry
 
 " miscellaneous settings
+let g:lisp_rainbow = 1                             " built-in rainbow parens for lisp
 nnoremap <leader>ag :AgForProjectRoot<space>
 nnoremap <leader>l :redraw!<enter>
 runtime macros/matchit.vim                         " enable default matchit plugin
@@ -149,9 +149,4 @@ if has ("autocmd")
     autocmd BufWritePost *.fs silent !chmod +x %
     " set filetype for rust
     autocmd BufEnter *.rs set ft=rust
-    " rainbow parens
-    au VimEnter * RainbowParenthesesToggle
-    au Syntax * RainbowParenthesesLoadRound
-    au Syntax * RainbowParenthesesLoadSquare
-    au Syntax * RainbowParenthesesLoadBraces
 endif
