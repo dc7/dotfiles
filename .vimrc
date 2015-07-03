@@ -72,7 +72,9 @@ set lazyredraw                                     " redraw only when we need to
 set listchars=tab:▸\ ,eol:¬                        " :set list to show tabs/newlines
 set mouse=a                                        " enable mouse in vim
 set noerrorbells visualbell t_vb=                  " don't beep on error
-set shell=bash
+if has("unix")
+    set shell=bash
+endif
 set smartcase                                      " smart case-sensitivity
 set splitright                                     " split right
 set suffixesadd=.py,.html,.js,.css,.scss,.cpp      " for :find
