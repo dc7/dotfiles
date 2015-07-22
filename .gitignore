@@ -3,6 +3,7 @@
 !.bashrc_after
 !.ghci
 !.gitignore
+!.pylintrc
 !.tmux.conf
 !.vimrc
 
