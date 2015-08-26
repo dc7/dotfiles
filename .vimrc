@@ -14,6 +14,7 @@ Plugin 'cmdalias.vim'                     " create aliases for vim commands
 Plugin 'csapprox'                         " support all colorschemes in terminal
 Plugin 'dbakker/vim-projectroot'          " :ProjectRootCD finds project root
 Plugin 'derekwyatt/ag.vim'                " :Ag integration
+Plugin 'elmcast/elm-vim'                  " elm syntax highlighting
 Plugin 'gilligan/textobj-gitgutter'       " ah ih git hunk object
 Plugin 'glts/vim-textobj-comment'         " ac ic aC comment object
 Plugin 'gmarik/Vundle.vim'                " let vundle manage vundle, required
@@ -152,4 +153,7 @@ if has ("autocmd")
     autocmd BufWritePost *.fs silent !chmod +x %
     " set filetype for rust
     autocmd BufEnter *.rs set ft=rust
+    " set comment type for elm
+    autocmd BufEnter *.elm set comments=:--
+    autocmd BufEnter *.elm set commentstring=--\ %s
 endif
