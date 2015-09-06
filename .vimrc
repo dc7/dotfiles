@@ -4,9 +4,7 @@ filetype off
 set rtp+=$HOME/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'airblade/vim-gitgutter'           " show git diff in gutter
-Plugin 'altercation/vim-colors-solarized' " colorscheme
 Plugin 'ap/vim-css-color'                 " highlight colors in css files
-Plugin 'autumnleaf'                       " colorscheme
 Plugin 'bling/vim-airline'                " fancy status/tabline
 Plugin 'chase/vim-ansible-yaml'           " syntax highlighting for ansible yaml
 Plugin 'christoomey/vim-tmux-navigator'   " tmux integration
@@ -15,6 +13,7 @@ Plugin 'csapprox'                         " support all colorschemes in terminal
 Plugin 'dbakker/vim-projectroot'          " :ProjectRootCD finds project root
 Plugin 'derekwyatt/ag.vim'                " :Ag integration
 Plugin 'elmcast/elm-vim'                  " elm syntax highlighting
+Plugin 'flazz/vim-colorschemes'           " colorschemes
 Plugin 'gilligan/textobj-gitgutter'       " ah ih git hunk object
 Plugin 'glts/vim-textobj-comment'         " ac ic aC comment object
 Plugin 'gmarik/Vundle.vim'                " let vundle manage vundle, required
@@ -29,6 +28,7 @@ Plugin 'maxbrunsfeld/vim-yankstack'       " M-p M-S-p yank stack
 Plugin 'nelstrom/vim-qargs'               " :Qargs populates args from quickfixes
 Plugin 'nelstrom/vim-visual-star-search'  " * searches for selection
 Plugin 'pangloss/vim-javascript'          " Javascript syntax and indenting
+Plugin 'scrollcolors'                     " :COLOR helps choose colorscheme
 Plugin 'scrooloose/syntastic'             " syntax checking
 Plugin 'sjl/gundo.vim'                    " :GundoToggle shows undo tree
 Plugin 'tpope/vim-commentary'             " gc comments stuff out
@@ -45,11 +45,7 @@ filetype plugin indent on
 
 " colorscheme
 set t_Co=256
-try
-    colorscheme autumnleaf
-    let g:colors_name = 'autumnleaf' " fix bug in autumnleaf colorscheme
-catch
-endtry
+colorscheme badwolf
 
 " miscellaneous settings
 let g:lisp_rainbow = 1                             " built-in rainbow parens for lisp
