@@ -12,6 +12,7 @@ Plugin 'cmdalias.vim'                     " create aliases for vim commands
 Plugin 'csapprox'                         " support all colorschemes in terminal
 Plugin 'dbakker/vim-projectroot'          " :ProjectRootCD finds project root
 Plugin 'derekwyatt/ag.vim'                " :Ag integration
+Plugin 'derekwyatt/vim-scala'             " scala integration
 Plugin 'elmcast/elm-vim'                  " elm syntax highlighting
 Plugin 'flazz/vim-colorschemes'           " colorschemes
 Plugin 'gilligan/textobj-gitgutter'       " ah ih git hunk object
