@@ -80,35 +80,6 @@ set wildmenu                                       " visual autocomplete for com
 set wildmode=list:longest,full                     " longest matches first
 syntax enable                                      " enable syntax processing
 
-" windows-like copy, cut, and paste
-vnoremap <C-X> "+x
-vnoremap <C-C> "+y
-map <C-V> "+gP
-cmap <C-V> <C-R>+
-exe 'inoremap <script> <C-V>' paste#paste_cmd['i']
-exe 'vnoremap <script> <C-V>' paste#paste_cmd['v']
-noremap <C-S-V> <C-V>
-inoremap <C-S-V> <C-V>
-cnoremap <C-S-V> <C-V>
-if !has("unix")
-    set guioptions-=a
-endif
-
-" revup shortcuts
-cnoremap Find<space>a/ find authorize/
-cnoremap Find<space>c/ find campaign/
-cnoremap Find<space>ca/ find campaign_admin/
-cnoremap Find<space> find 
-cnoremap find<space>a/ find authorize/
-cnoremap find<space>c/ find campaign/
-cnoremap find<space>ca/ find campaign_admin/
-
-" search priority for revup repository
-set path+=$HOME/revup/data_manager/data_manager/static/**
-set path+=$HOME/revup/data_manager/**
-set path+=$HOME/revup/work/frontend/frontend/static/**
-set path+=$HOME/revup/**
-
 " backup settings
 set backup
 set backupdir=$HOME/.vim-tmp,$HOME/.tmp,$HOME/tmp,/var/tmp,/tmp
@@ -128,28 +99,10 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = '-std=c++1y -Weverything -Wno-c++98-compat -Wno-padded'
 let g:syntastic_python_checkers = ['flake8', 'pep8', 'pyflakes', 'pylint', 'python']
 
-" if c++ makefile doesn't exist, set a default make command
-function! SetCppMakePrg()
-    if !filereadable(expand("%:p:h")."/Makefile")
-        setlocal makeprg=clang++\ -o\%<\ %\ -std=c++1y\ -Weverything\ -Wno-c++98-compat\ -Wno-padded\ -Werror\ -fsanitize=alignment,bool,bounds,enum,float-cast-overflow,float-divide-by-zero,function,integer,integer-divide-by-zero,null,object-size,return,shift,signed-integer-overflow,undefined,unreachable,unsigned-integer-overflow,vla-bound,vptr
-    endif
-endfunction
-
 " autocommands
 if has ("autocmd")
-    " run grunt after editing for revup
-    autocmd BufWritePost *.js,*.css,*.scss silent !$HOME/scripts/grunt.sh
     " disable automatic continuation of comments
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
     " disable flashing on error
     autocmd GUIEnter * set visualbell t_vb=
-    " set default make command for c++
-    autocmd BufEnter *.cpp :call SetCppMakePrg()
-    " automatically mark forth scripts as executable
-    autocmd BufWritePost *.fs silent !chmod +x %
-    " set filetype for rust
-    autocmd BufEnter *.rs set ft=rust
-    " set comment type for elm
-    autocmd BufEnter *.elm set comments=:--
-    autocmd BufEnter *.elm set commentstring=--\ %s
 endif
