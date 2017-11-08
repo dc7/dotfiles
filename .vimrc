@@ -30,7 +30,6 @@ Plugin 'nelstrom/vim-qargs'               " :Qargs populates args from quickfixe
 Plugin 'nelstrom/vim-visual-star-search'  " * searches for selection
 Plugin 'pangloss/vim-javascript'          " Javascript syntax and indenting
 Plugin 'scrollcolors'                     " :COLOR helps choose colorscheme
-Plugin 'scrooloose/syntastic'             " syntax checking
 Plugin 'sjl/gundo.vim'                    " :GundoToggle shows undo tree
 Plugin 'tpope/vim-commentary'             " gc comments stuff out
 Plugin 'tpope/vim-dispatch'               " :Make compiles asynchronously
@@ -39,6 +38,7 @@ Plugin 'tpope/vim-obsession'              " save/restore sessions
 Plugin 'tpope/vim-repeat'                 " dot repetition for some plugins
 Plugin 'tpope/vim-surround'               " simple quoting and parenthesizing
 Plugin 'unimpaired.vim'                   " complementary bracket mappings
+Plugin 'w0rp/ale'                         " asynchronous lint engine
 Plugin 'wting/rust.vim'                   " rust syntax highlighting
 call vundle#end()
 filetype plugin indent on
@@ -94,11 +94,6 @@ set undofile
 set undodir=$HOME/.vim/undo
 set undolevels=1000
 set undoreload=10000
-
-" syntastic settings
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-std=c++1y -Weverything -Wno-c++98-compat -Wno-padded'
-let g:syntastic_python_checkers = ['flake8', 'pep8', 'pyflakes', 'pylint', 'python']
 
 " autocommands
 if has ("autocmd")
