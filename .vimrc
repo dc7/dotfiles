@@ -100,4 +100,6 @@ if has ("autocmd")
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
     " disable flashing on error
     autocmd GUIEnter * set visualbell t_vb=
+    " set filetype for typescript
+    autocmd BufEnter *.ts set ft=typescript
 endif
