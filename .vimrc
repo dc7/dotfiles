@@ -28,6 +28,7 @@ Plugin 'majutsushi/tagbar'                " :TagbarToggle shows tags
 Plugin 'maxbrunsfeld/vim-yankstack'       " M-p M-S-p yank stack
 Plugin 'nelstrom/vim-qargs'               " :Qargs populates args from quickfixes
 Plugin 'nelstrom/vim-visual-star-search'  " * searches for selection
+Plugin 'oranget/vim-csharp'               " syntax highlighting for c#
 Plugin 'pangloss/vim-javascript'          " Javascript syntax and indenting
 Plugin 'scrollcolors'                     " :COLOR helps choose colorscheme
 Plugin 'sjl/gundo.vim'                    " :GundoToggle shows undo tree
@@ -101,6 +102,8 @@ if has ("autocmd")
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
     " disable flashing on error
     autocmd GUIEnter * set visualbell t_vb=
+    " set filetype for cshtml
+    autocmd BufEnter *.cshtml set ft=cshtml
     " set filetype for typescript
     autocmd BufEnter *.ts set ft=typescript
 endif
