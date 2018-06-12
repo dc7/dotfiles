@@ -21,6 +21,7 @@ Plugin 'gmarik/Vundle.vim'                " let vundle manage vundle, required
 Plugin 'godlygeek/tabular'                " :Tabular lines up text
 Plugin 'kana/vim-textobj-entire'          " ae ie entire buffer object
 Plugin 'kana/vim-textobj-lastpat'         " a/ i/ last pattern object
+Plugin 'kana/vim-textobj-line'            " al il current line object
 Plugin 'kana/vim-textobj-user'            " custom text object support
 Plugin 'lokaltog/vim-easymotion'          " \\w etc. easy motion
 Plugin 'majutsushi/tagbar'                " :TagbarToggle shows tags
