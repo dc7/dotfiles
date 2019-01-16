@@ -1,5 +1,5 @@
 # disable welcome message
-set --erase fish_greeting
+set fish_greeting
 
 # use dollar sign as prompt
 function fish_prompt
