@@ -5,6 +5,3 @@ set fish_greeting
 function fish_prompt
     echo "\$ "
     end
-
-# enable rvm
-rvm default
